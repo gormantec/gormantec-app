@@ -24,3 +24,6 @@ aPWA.floatingActionButton.onclick(function(){
   console.log("button clicked");
   alert("Hello World!");
 });
+
+
+//*****
