@@ -26,22 +26,12 @@ var secondPage=new Page({
   child: new Div({innerHTML:"url(https://git.gormantec.com/gcode/html/test.html)"})
 });
 
-var aPWA=new PWA({
-        title:"Hello World",
-        footer:"https://www.gormantec.com",
-        primaryColor:"#005040",
-    });
+var aPWA=new PWA({ title:"Gorman Technology", footer:"https://www.gormantec.com", primaryColor:"#005040" });
 
 aPWA.show();
 
-aPWA.floatingActionButton.onclick(function(){
-  console.log("This will open a new page.");
-  aPWA.setPage(secondPage);
-});
+aPWA.floatingActionButton.onclick(function(){ aPWA.setPage(secondPage); });
 
 aPWA.pwaBody.style.backgroundColor="black";
 
-window.setTimeout(function(){
-	aPWA.setPage(homePage);
-},1000);
-console.log('new javascript file!');
+window.setTimeout(function(){ aPWA.setPage(homePage); },1000);
